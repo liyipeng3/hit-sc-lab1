@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src/P1"/>
+	<classpathentry kind="src" path="src/P2"/>
+	<classpathentry kind="src" path="src/P3"/>
+	<classpathentry kind="src" path="src/P4"/>
+	<classpathentry kind="src" path="test/P3"/>
+	<classpathentry kind="src" path="test/P4"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry exported="true" kind="lib" path="lib/javax.json-1.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
