@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="Lab1-1170800716" default="gen-report-coverage" basedir=".">
+<project name="Lab1-1170800716" default="run" basedir=".">
 	<property name="lib.dir" value="lib" />
 	<path id="classpath">
 		<fileset dir="${lib.dir}" includes="**/*.jar" />
@@ -10,23 +10,9 @@
 	<property name="test" value="test" />
 	<property name="xml" value="xml" />
 
-
-	<property name="coverage.dir" value="coverage" />
-	<property name="emma.dir" value="lib" />
-	<property name="instrumented.dir" value="inst" />
-	<path id="emma.lib">
-		<fileset dir="${emma.dir}">
-			<include name="*.jar" />
-		</fileset>
-	</path>
-
-	<taskdef resource="emma_ant.properties" classpathref="emma.lib" />
-
 	<target name="compile init">
 		<mkdir dir="${output}" />
 		<mkdir dir="${xml}" />
-		<mkdir dir="${coverage.dir}" />
-		<mkdir dir="${instrumented.dir}" />
 		<echo>创建编译文件夹 成功!</echo>
 	</target>
 
@@ -41,14 +27,9 @@
 	</target>
 
 	<target name="all compile" depends="compile, test compile">
-		<emma enabled="${emma.enabled}">
-		     <instr instrpath="${output}" destdir="${instrumented.dir}" metadatafile="${coverage.dir}/metadata.emma" merge="true">
-		     </instr>
-		 </emma>
 	</target>
 	<target name="junit" depends="all compile">
 		<junit printsummary="yes" fork="true" showoutput="true">
-
 			<assertions>
 				<enable />
 			</assertions>
@@ -63,11 +44,11 @@
 				</fileset>
 			</batchtest>
 		</junit>
-
 	</target>
 
 	<target name="run" depends="junit">
-		<!--<java classname="twitter.Main" classpath="${output}" fork="true">
+		<!--
+		<java classname="twitter.Main" classpath="${output}" fork="true">
 			<assertions>
 				<enable />
 			</assertions>
@@ -75,32 +56,12 @@
 				<path refid="classpath" />
 				<path location="${lib.dir}/*.jar" />
 			</classpath>
-		</java>-->
+		</java>
+		-->
 	</target>
 
 	<target name="test" depends="run">
-		<emma enabled="true" >
-		     <report sourcepath="${src}" >
-		         <fileset dir="${coverage.dir}" >
-		             <include name="*.emma" />
-		         </fileset>
-		 
-		         <xml outfile="${coverage.dir}/coverage.xml" depth="method"/>
-		     </report>
-		 </emma>
 		<echo>测试成功!</echo>
-	</target>
-	
-	<target name="gen-report-coverage" depends="test">
-	<!-- if enabled, generate coverage report(s): -->
-	<emma enabled="${emma.enabled}">
-	<report sourcepath="${src}" sort="+block,+name,+method,+class" metrics="method:70,block:80,line:80,class:100">
-	<fileset dir="${coverage.dir}">
-	<include name="*.emma" />
-	</fileset>
-	<html outfile="${coverage.dir}/coverage.html" depth="method" columns="name,class,method,block,line" />
-	</report>
-	</emma>
 	</target>
 
 </project>
