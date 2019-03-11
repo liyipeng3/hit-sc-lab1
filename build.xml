@@ -58,8 +58,14 @@
 		</java>
 	</target>
 
-	<target name="test" depends="run">
+	<target name="clean" depends="run">
+	<delete dir="classes" />
+	<delete dir="xml" />
+	</target>
+
+	<target name="test" depends="clean">
 		<echo>测试成功!</echo>
 	</target>
+
 
 </project>
