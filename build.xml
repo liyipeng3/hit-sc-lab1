@@ -4,6 +4,9 @@
 	<path id="classpath">
 		<fileset dir="${lib.dir}" includes="**/*.jar" />
 	</path>
+	<path id="class">
+		<fileset dir="${output}" includes="**/**" />
+	</path>
 	<path id="emma.lib" >
     <pathelement location="${lib.dir}/emma.jar" />
     <pathelement location="${lib.dir}/emma_ant.jar" />
