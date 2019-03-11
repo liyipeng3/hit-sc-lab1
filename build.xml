@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="Lab1-1170800716" default="run" basedir=".">
+<project name="Lab1-1170800716" default="test" basedir=".">
 	<property name="lib.dir" value="lib" />
 	<path id="classpath">
 		<fileset dir="${lib.dir}" includes="**/*.jar" />
