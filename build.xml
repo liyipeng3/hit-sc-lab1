@@ -47,6 +47,7 @@
 	</target>
 
 	<target name="run" depends="junit">
+	<!--
 		<java classname="twitter.Main" classpath="${output}" fork="true">
 			<assertions>
 				<enable />
@@ -56,6 +57,7 @@
 				<path location="${lib.dir}/*.jar" />
 			</classpath>
 		</java>
+	-->
 	</target>
 
 	<target name="clean" depends="run">
