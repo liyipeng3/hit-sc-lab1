@@ -5,6 +5,7 @@
 		<fileset dir="${lib.dir}" includes="**/*.jar" />
 	</path>
 
+	<property name="emma.enabled" value="true" />
 	<property name="output" value="classes" />
 	<property name="src" value="src" />
 	<property name="test" value="test" />
@@ -47,6 +48,13 @@
 	</target>
 
 	<target name="run" depends="junit">
+		<emma enabled="${emma.enabled}" >
+      <instr instrpathref="run.classpath"
+             destdir="${output}" 
+             metadatafile="${xml}/metadata.emma"
+             merge="true"
+      />
+    </emma>
 		<java classname="twitter.Main" classpath="${output}" fork="true">
 			<assertions>
 				<enable />
@@ -55,7 +63,19 @@
 				<path refid="classpath" />
 				<path location="${lib.dir}/*.jar" />
 			</classpath>
+			      <jvmarg value="-Demma.coverage.out.file=${coverage.dir}/coverage.emma" />
+      <jvmarg value="-Demma.coverage.out.merge=true" />
 		</java>
+		 <emma enabled="${emma.enabled}" >
+      <report sourcepath="${src}" >
+        <fileset dir="${output}" >
+          <include name="*.emma" />
+        </fileset>
+
+        <txt outfile="${xml}/coverage.txt" />
+        <html outfile="${xml}/coverage.html" />
+      </report>
+    </emma>
 	</target>
 
 	<target name="test" depends="run">
