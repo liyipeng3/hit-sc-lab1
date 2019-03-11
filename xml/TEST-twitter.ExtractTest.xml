@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="小明" name="twitter.ExtractTest" skipped="0" tests="5" time="0.094" timestamp="2019-03-11T12:22:00">
+  <properties>
+    <property name="java.vendor" value="Oracle Corporation" />
+    <property name="lib.dir" value="lib" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="eclipse.pdebuild.templates" value="C:\Users\17895\.p2\pool\plugins\org.eclipse.pde.build_3.10.200.v20181008-0641\templates" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="os.name" value="Windows 10" />
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jre1.8.0_201\lib\resources.jar;C:\Program Files\Java\jre1.8.0_201\lib\rt.jar;C:\Program Files\Java\jre1.8.0_201\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_201\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_201\lib\jce.jar;C:\Program Files\Java\jre1.8.0_201\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_201\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_201\classes" />
+    <property name="sun.desktop" value="windows" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="ant.home" value="C:\Users\17895\.p2\pool\plugins\org.apache.ant_1.10.5.v20180808-0324" />
+    <property name="java.runtime.version" value="1.8.0_201-b09" />
+    <property name="user.name" value="17895" />
+    <property name="output" value="classes" />
+    <property name="user.language" value="zh" />
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jre1.8.0_201\bin" />
+    <property name="ant.project.default-target" value="gen-report-coverage" />
+    <property name="ant.project.name" value="Lab1-1170800716" />
+    <property name="java.version" value="1.8.0_201" />
+    <property name="user.timezone" value="" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jre1.8.0_201\lib\endorsed" />
+    <property name="sun.cpu.isalist" value="amd64" />
+    <property name="sun.jnu.encoding" value="GBK" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="file.separator" value="\" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="java.class.version" value="52.0" />
+    <property name="src" value="src" />
+    <property name="user.country" value="CN" />
+    <property name="java.home" value="C:\Program Files\Java\jre1.8.0_201" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="ant.file" value="C:\Users\17895\Desktop\实验\Java\Lab1\build.xml" />
+    <property name="os.version" value="10.0" />
+    <property name="path.separator" value=";" />
+    <property name="java.vm.version" value="25.201-b09" />
+    <property name="user.variant" value="" />
+    <property name="ant.library.dir" value="C:\Users\17895\.p2\pool\plugins\org.apache.ant_1.10.5.v20180808-0324\lib" />
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+    <property name="user.script" value="" />
+    <property name="eclipse.pdebuild.scripts" value="C:\Users\17895\.p2\pool\plugins\org.eclipse.pde.build_3.10.200.v20181008-0641\scripts" />
+    <property name="coverage.dir" value="coverage" />
+    <property name="user.home" value="C:\Users\17895" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="test" value="test" />
+    <property name="java.library.path" value="C:\Program Files\Java\jre1.8.0_201\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_201/bin/server;C:/Program Files/Java/jre1.8.0_201/bin;C:/Program Files/Java/jre1.8.0_201/lib/amd64;C:\Program Files (x86)\NetSarang\Xftp 6\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\MentorGraphics\9.5PADS\SDD_HOME\common\win32\bin;C:\MentorGraphics\9.5PADS\SDD_HOME\common\win32\lib;C:\MentorGraphics\9.5PADS\MGC_HOME.ixn\bin;C:\MentorGraphics\9.5PADS\MGC_HOME.ixn\lib;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\nodejs\;d:\Program Files\Git\cmd;C:\Program Files\Java\apache-ant-1.10.5\bin;C:\Program Files\Java\jdk1.8.0_201\bin;C:\Program Files\Java\jdk1.8.0_201\jre\bin;C:\Users\17895\scoop\shims;C:\Users\17895\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\17895\AppData\Local\Programs\Python\Python37\;C:\Users\17895\AppData\Local\Microsoft\WindowsApps;C:\Users\17895\AppData\Local\Programs\Fiddler;C:\Users\17895\AppData\Local\GitHubDesktop\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\CMake\bin;;C:\Program Files\JetBrains\WebStorm 2018.3.2\bin;;C:\Program Files\JetBrains\CLion 2018.3.2\bin;;C:\Users\17895\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\17895\AppData\Roaming\npm;C:\Users\17895\Desktop;;." />
+    <property name="java.vendor.url" value="http://java.oracle.com/" />
+    <property name="java.vm.vendor" value="Oracle Corporation" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner twitter.ExtractTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\17895\Desktop\实验\Java\Lab1\xml\TEST-twitter.ExtractTest.xml crashfile=C:\Users\17895\Desktop\实验\Java\Lab1\junitvmwatcher6527996874326829359.properties propsfile=C:\Users\17895\Desktop\实验\Java\Lab1\junit1114695890087416989.properties" />
+    <property name="java.class.path" value="C:\Users\17895\Desktop\实验\Java\Lab1\lib\emma.jar;C:\Users\17895\Desktop\实验\Java\Lab1\lib\emma_ant.jar;C:\Users\17895\Desktop\实验\Java\Lab1\lib\javax.json-1.0.jar;C:\Users\17895\Desktop\实验\Java\Lab1\lib\junit.jar;C:\Users\17895\Desktop\实验\Java\Lab1\lib\org.hamcrest.core_1.3.0.v20180420-1519.jar;C:\Users\17895\Desktop\实验\Java\Lab1\classes;C:\Users\17895\Desktop\实验\Java\Lab1;C:\Program Files\Java\jdk1.8.0_201\bin;C:\Program Files\Java\jdk1.8.0_201\lib\dt.jar;C:\Program Files\Java\jdk1.8.0_201\lib\tools.jar;C:\Program Files\Java\apache-ant-1.10.5\lib;C:\Users\17895\.p2\pool\plugins\org.apache.ant_1.10.5.v20180808-0324\lib\ant-launcher.jar;C:\Users\17895\.p2\pool\plugins\org.apache.ant_1.10.5.v20180808-0324\lib\ant.jar;C:\Users\17895\.p2\pool\plugins\org.apache.ant_1.10.5.v20180808-0324\lib\ant-junit.jar;C:\Users\17895\.p2\pool\plugins\org.apache.ant_1.10.5.v20180808-0324\lib\ant-junit4.jar" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.10.5 compiled on July 10 2018" />
+    <property name="ant.file.Lab1-1170800716" value="C:\Users\17895\Desktop\实验\Java\Lab1\build.xml" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="java.vm.specification.version" value="1.8" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="sun.os.patch.level" value="" />
+    <property name="eclipse.pdebuild.home" value="C:\Users\17895\.p2\pool\plugins\org.eclipse.pde.build_3.10.200.v20181008-0641\." />
+    <property name="java.io.tmpdir" value="C:\Users\17895\AppData\Local\Temp\" />
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+    <property name="os.arch" value="amd64" />
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+    <property name="instrumented.dir" value="inst" />
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jre1.8.0_201\lib\ext;C:\WINDOWS\Sun\Java\lib\ext" />
+    <property name="user.dir" value="C:\Users\17895\Desktop\实验\Java\Lab1" />
+    <property name="emma.dir" value="lib" />
+    <property name="line.separator" value="&#xd;&#xa;" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="basedir" value="C:\Users\17895\Desktop\实验\Java\Lab1" />
+    <property name="ant.java.version" value="1.8" />
+    <property name="ant.file.type.Lab1-1170800716" value="file" />
+    <property name="ant.core.lib" value="C:\Users\17895\.p2\pool\plugins\org.apache.ant_1.10.5.v20180808-0324\lib\ant.jar" />
+    <property name="file.encoding" value="GBK" />
+    <property name="java.specification.version" value="1.8" />
+    <property name="xml" value="xml" />
+    <property name="ant.project.invoked-targets" value="gen-report-coverage" />
+  </properties>
+  <testcase classname="twitter.ExtractTest" name="testGetMentionedUsersNoMention" time="0.002" />
+  <testcase classname="twitter.ExtractTest" name="testGetTimespanTwoTweets" time="0.001" />
+  <testcase classname="twitter.ExtractTest" name="testAssertionsEnabled" time="0.0" />
+  <testcase classname="twitter.ExtractTest" name="testGetMentionedUsersSomeMentions" time="0.002" />
+  <testcase classname="twitter.ExtractTest" name="testGetTimespanFiveTweets" time="0.0" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
