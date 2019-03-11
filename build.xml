@@ -4,7 +4,11 @@
 	<path id="classpath">
 		<fileset dir="${lib.dir}" includes="**/*.jar" />
 	</path>
-
+	<path id="emma.lib" >
+    <pathelement location="${lib.dir}/emma.jar" />
+    <pathelement location="${lib.dir}/emma_ant.jar" />
+    </path>
+    <taskdef resource="emma_ant.properties" classpathref="emma.lib" />
 	<property name="emma.enabled" value="true" />
 	<property name="output" value="classes" />
 	<property name="src" value="src" />
