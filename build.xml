@@ -53,7 +53,7 @@
 
 	<target name="run" depends="junit">
 		<emma enabled="${emma.enabled}" >
-      <instr instrpathref="run.classpath"
+      <instr instrpathref="${output}"
              destdir="${output}" 
              metadatafile="${xml}/metadata.emma"
              merge="true"
