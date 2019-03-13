@@ -92,7 +92,6 @@
 	</target>
 
 	<target name="clean" depends="coverage">
-		<delete dir="classes" />
 		<delete dir="xml" />
 	</target>
 
