@@ -1,49 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="Lab1-1170800716" default="test" basedir=".">
+<project name="Lab1-1170800716" default="test" basedir="." xmlns:jacoco="antlib:org.jacoco.ant">
 	<property name="lib.dir" value="lib" />
 	<path id="classpath">
 		<fileset dir="${lib.dir}" includes="**/*.jar" />
 	</path>
-
+	
+	<taskdef uri="antlib:org.jacoco.ant" resource="org/jacoco/ant/antlib.xml">
+		<classpath path="lib/jacocoant.jar">
+		</classpath>
+	</taskdef>
+	
 	<property name="output" value="classes" />
 	<property name="src" value="src" />
 	<property name="test" value="test" />
 	<property name="xml" value="xml" />
+	<property name="coverage" value="coverage" />
 
 	<target name="compile init">
 		<mkdir dir="${output}" />
 		<mkdir dir="${xml}" />
+		<mkdir dir="${coverage}" />
 		<echo>创建编译文件夹 成功!</echo>
 	</target>
 
 	<target name="compile" depends="compile init">
-		<javac srcdir="${src}" destdir="${output}" classpathref="classpath" />
+		<javac srcdir="${src}" destdir="${output}" classpathref="classpath" debug="on" includeantruntime="false" />
 		<echo>项目源文件编译 成功!</echo>
 	</target>
 
 	<target name="test compile">
-		<javac srcdir="${test}" destdir="${output}" classpathref="classpath" />
+		<javac srcdir="${test}" destdir="${output}" classpathref="classpath" debug="on" includeantruntime="false" />
 		<echo>项目测试文件编译 成功!</echo>
 	</target>
 
 	<target name="all compile" depends="compile, test compile">
+		<echo>编译结束!</echo>
 	</target>
+	
 	<target name="junit" depends="all compile">
-		<junit printsummary="yes" fork="true" showoutput="true">
-			<assertions>
-				<enable />
-			</assertions>
-			<classpath>
-				<fileset dir="${lib.dir}" includes="**/*.jar" />
-				<pathelement path="${output}" />
-			</classpath>
-			<formatter type="xml" />
-			<batchtest todir="${xml}">
-				<fileset dir="${output}">
-					<include name="**/*Test.*" />
-				</fileset>
-			</batchtest>
-		</junit>
+		<jacoco:coverage>
+			<junit printsummary="yes" fork="true" showoutput="true">
+				<assertions>
+					<enable />
+				</assertions>
+				<classpath>
+					<fileset dir="${lib.dir}" includes="**/*.jar" />
+					<pathelement path="${output}" />
+				</classpath>
+				<formatter type="xml" />
+				<batchtest todir="${xml}">
+					<fileset dir="${output}">
+						<include name="**/*Test.*" />
+					</fileset>
+				</batchtest>
+			</junit>
+		</jacoco:coverage>
 	</target>
 
 	<target name="run" depends="junit">
@@ -60,14 +71,33 @@
 	-->
 	</target>
 
-	<target name="clean" depends="run">
-	<delete dir="classes" />
-	<delete dir="xml" />
+	<target name="coverage" depends="run">
+		<jacoco:report>
+			<executiondata>
+				<file file="${basedir}/jacoco.exec" />
+			</executiondata>
+			<structure name="Coverage rate report.">
+				<classfiles>
+					<fileset dir="${output}" />
+				</classfiles>
+				<sourcefiles encoding="UTF-8">
+					<fileset dir="${src}" />
+				</sourcefiles>
+			</structure>
+
+			<html footer="lyp123.cn" destdir="${coverage}" />
+			<csv destfile="${coverage}/coverage-report.csv" />
+			<xml destfile="${coverage}/coverage-report.xml" />
+		</jacoco:report>
+	</target>
+
+	<target name="clean" depends="coverage">
+		<delete dir="classes" />
+		<delete dir="xml" />
 	</target>
 
 	<target name="test" depends="clean">
-		<echo>测试成功!</echo>
+		<echo>Test Successful!</echo>
 	</target>
-
 
 </project>
